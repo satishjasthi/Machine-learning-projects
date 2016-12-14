@@ -1,0 +1,13 @@
+#a machine learning program to classify apples and oranges
+import sklearn
+from sklearn import tree
+
+features = [[140,1],[130,1],[150,0],[170,0]] #1 means smooth texture for orange and 2 means bumpy texture for orange.features are nothing but X
+labels = [1,1,0,0]#1 for apple and 0 for oranges
+
+#train Decision tree classifier to classify inputs as an apple or an orange
+
+clf = tree.DecisionTreeClassifier() # defining Decision tree classifier 
+clf = clf.fit(features,labels) # training classifier
+
+print clf.predict([160,0])
