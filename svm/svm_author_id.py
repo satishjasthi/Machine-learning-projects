@@ -27,7 +27,7 @@ labels_train = labels_train[:len(labels_train)/100]
 #########################################################
 ### your code goes here ###
 t0 = time()
-clf = svm.SVC(kernel = "rbf")
+clf = svm.SVC(kernel = "rbf",C = 10000)
 clf.fit(features_train,labels_train)
 print "Training time: ",round(time()-t0,3),"s"
 t1 = time()
