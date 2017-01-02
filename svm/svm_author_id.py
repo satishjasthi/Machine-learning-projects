@@ -33,6 +33,10 @@ pred = clf.predict(features_test)
 print "Predicting time: ",round(time()-t1,3),"s"
 
 print(accuracy_score(labels_test,pred))
+
+print("SVM's prediction : ",clf.predict(10,26,50))
+print("Actuall answers : ", predicition[(10,26,50)])
+
 #########################################################
 
 
