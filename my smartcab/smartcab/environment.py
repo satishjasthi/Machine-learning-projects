@@ -4,6 +4,7 @@ import math
 from collections import OrderedDict
 from simulator import Simulator
 
+
 class TrafficLight(object):
     """A traffic light that switches periodically."""
 
@@ -461,5 +462,3 @@ class DummyAgent(Agent):
             action = self.next_waypoint
             self.next_waypoint = random.choice(Environment.valid_actions[1:])
         reward = self.env.act(self, action)
-
-
